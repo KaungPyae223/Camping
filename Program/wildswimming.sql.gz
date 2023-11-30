@@ -1,0 +1,499 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 13, 2023 at 05:18 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `wildswimming`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `AdminID` int(11) NOT NULL,
+  `AdminName` varchar(50) DEFAULT NULL,
+  `AdminEmail` varchar(50) DEFAULT NULL,
+  `AdminPhoneNumber` varchar(20) DEFAULT NULL,
+  `AdminAddress` varchar(50) DEFAULT NULL,
+  `Password` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`AdminID`, `AdminName`, `AdminEmail`, `AdminPhoneNumber`, `AdminAddress`, `Password`) VALUES
+(1, 'Kaung Pyae', 'KPAung1@GWSC.com', '09983167263', 'Bago \r\n            \r\n             \r\n            \r\n', 'KaungPyae123'),
+(2, 'Zaw Htet', 'ZawHtetAung1@GWSC.com', '093843734', 'Bago \r\n            \r\n            ', 'ZawHtet123'),
+(3, 'Aye Mya Mya', 'AyeMya@GWSC.com', '093321323', 'Yangon \r\n            \r\n            ', 'AyeMya123'),
+(4, 'Ko Lynn', 'KoLynn123@GWSC.com', '09217233455', 'Yangon \r\n            \r\n            ', 'KoLynn123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `booking`
+--
+
+CREATE TABLE `booking` (
+  `BookingCodeNo` int(11) NOT NULL,
+  `BookingDate` varchar(50) DEFAULT NULL,
+  `PitchID` int(11) DEFAULT NULL,
+  `Status` varchar(50) DEFAULT NULL,
+  `Price` int(11) DEFAULT NULL,
+  `SubTotal` int(11) DEFAULT NULL,
+  `Tax` int(11) DEFAULT NULL,
+  `CustomerEmail` varchar(50) DEFAULT NULL,
+  `BookingQty` int(11) DEFAULT NULL,
+  `CustomerID` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`BookingCodeNo`, `BookingDate`, `PitchID`, `Status`, `Price`, `SubTotal`, `Tax`, `CustomerEmail`, `BookingQty`, `CustomerID`) VALUES
+(3, '28-9-2023', 14, '', 630, 600, 30, 'KPAung1@gmail.com', 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campsite`
+--
+
+CREATE TABLE `campsite` (
+  `CampsiteID` int(11) NOT NULL,
+  `CampsiteName` varchar(50) DEFAULT NULL,
+  `Location` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `campsite`
+--
+
+INSERT INTO `campsite` (`CampsiteID`, `CampsiteName`, `Location`) VALUES
+(6, 'Camp Azure', 'Australia'),
+(7, 'Camp Wilderness', 'Thailand'),
+(9, 'Bagan Resort', 'Myanmar'),
+(10, 'Camp Twilight', 'England'),
+(11, 'Camp Sunshine', 'China ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `ContactID` int(11) NOT NULL,
+  `ContactMessage` longtext DEFAULT NULL,
+  `Email` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`ContactID`, `ContactMessage`, `Email`) VALUES
+(1, 'All the members of GWSC. I hope all of you are well and happy. I wish you that your GWSC website to improve and can give better facilities, services than ever.', 'KPAung1@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `CustomerID` int(11) NOT NULL,
+  `FirstName` varchar(50) DEFAULT NULL,
+  `SurName` varchar(50) DEFAULT NULL,
+  `Email` varchar(20) DEFAULT NULL,
+  `Addresses` varchar(50) DEFAULT NULL,
+  `PhoneNo` varchar(20) DEFAULT NULL,
+  `Password` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`CustomerID`, `FirstName`, `SurName`, `Email`, `Addresses`, `PhoneNo`, `Password`) VALUES
+(1, 'Kaung', 'Aung', 'KPAung1@gmail.com', 'Bago', '09983167264', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ipaddress`
+--
+
+CREATE TABLE `ipaddress` (
+  `ID` int(11) NOT NULL,
+  `IP` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ipaddress`
+--
+
+INSERT INTO `ipaddress` (`ID`, `IP`) VALUES
+(1, '127.0.0.1'),
+(2, '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `localattraction`
+--
+
+CREATE TABLE `localattraction` (
+  `LocalAttractionID` int(11) NOT NULL,
+  `LocalAttractionName` varchar(50) DEFAULT NULL,
+  `LocalAttractionIntroImage` longtext DEFAULT NULL,
+  `LocalAttractionDescription` longtext DEFAULT NULL,
+  `LocalAttractionFeatures` varchar(255) DEFAULT NULL,
+  `LocalAttractionImages` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `localattraction`
+--
+
+INSERT INTO `localattraction` (`LocalAttractionID`, `LocalAttractionName`, `LocalAttractionIntroImage`, `LocalAttractionDescription`, `LocalAttractionFeatures`, `LocalAttractionImages`) VALUES
+(2, 'Melbourne', 'Images/_big-city-park-melbourne-new.jpg', 'Melbourne is the coastal capital of the southeastern Australian state of Victoria. At the city center is the modern Federation Square development, with plazas, bars, and restaurants by the Yarra River. In the Southbank area, the Melbourne Arts Precinct is the site of Arts Centre Melbourne – a performing arts complex – and the National Gallery of Victoria, with Australian and indigenous art.', 'Federation Square + Melbourne Museum + Melbourne ZMelbourne Zoo + St. Kilda Beach + Great Ocean Road + Phillip Island + ', 'Images/download (1).jpg+Images/download (2).jpg+Images/download (3).jpg+Images/download (4).jpg+Images/download (5).jpg+'),
+(3, 'Thailand', 'Images/_fishing-209112_1920.jpg', 'Thailand is a Southeast Asian country. It iss known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach resorts include bustling Pattaya and fashionable Hua Hin.', 'Erawan National Park, + Erawan National Park + EraErawan Falls + Sai Yok Noi Waterfall + Doi Inthanon National Park + Pha Taem National Park + ', 'Images/download (11).jpg+Images/download (10).jpg+Images/download (9).jpg+Images/download (8).jpg+'),
+(4, 'Bagan', 'Images/_burma-1955982_1920.jpg', 'Bagan is an ancient city and a UNESCO World Heritage Site in the Mandalay Region of Myanmar. From the 9th to 13th centuries, the city was the capital of the Bagan Kingdom, the first kingdom that unified the regions that would later constitute Myanmar.', 'Hot Air Balloon Ride + Bagan Archaeological Zone +Mount Popa + Sunset Viewing + Horse-Drawn Cart Ride + Bagan River Cruises + ', 'Images/download (15).jpg+Images/download (14).jpg+Images/download (13).jpg+Images/download (12).jpg+'),
+(5, 'Beijing', 'Images/_temple-of-heaven-3675835_1920.jpg', 'Beijing, China sprawling capital, has history stretching back 3 millennia. Yet it is known as much for modern architecture as its ancient sites such as the grand Forbidden City complex, the imperial palace during the Ming and Qing dynasties. Nearby, the massive Tiananmen Square pedestrian plaza is the site of Mao Zedong mausoleum and the National Museum of China, displaying a vast collection of cultural relics.', 'Yunmeng Mountain Scenic Area + Jinshanling Great WJinshanling Great Wall + Songshan Lake + Baihe Valley Nature Reserve + ', 'Images/download (19).jpg+Images/download (18).jpg+Images/download (17).jpg+Images/download (16).jpg+'),
+(6, 'England', 'Images/_mountain-1462655_1920.jpg', 'England is a country that is part of the United Kingdom. It shares land borders with Wales to its west and Scotland to its north, while Ireland is located across the Irish Sea to its west and northwest, and the Celtic Sea lies to its southwest.', 'Dartmoor National Park + Lake District National Park + Walking and Hiking Trails + Exmoor National Park + ', 'Images/download (23).jpg+Images/download (22).jpg+Images/download (21).jpg+Images/download (20).jpg+');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pitches`
+--
+
+CREATE TABLE `pitches` (
+  `PitchID` int(11) NOT NULL,
+  `PitchName` varchar(50) DEFAULT NULL,
+  `PitchIntroImage` text DEFAULT NULL,
+  `Location` varchar(255) DEFAULT NULL,
+  `FacilitiesName` longtext DEFAULT NULL,
+  `FacilitiesImage` longtext DEFAULT NULL,
+  `Price` int(11) DEFAULT NULL,
+  `Description` longtext DEFAULT NULL,
+  `Status` varchar(10) DEFAULT NULL,
+  `CampsiteID` int(11) DEFAULT NULL,
+  `PitchTypeID` int(11) DEFAULT NULL,
+  `LocalAttractionID` int(11) DEFAULT NULL,
+  `Duration` varchar(20) DEFAULT NULL,
+  `FacilitiesDescription` longtext DEFAULT NULL,
+  `LocationAddress` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pitches`
+--
+
+INSERT INTO `pitches` (`PitchID`, `PitchName`, `PitchIntroImage`, `Location`, `FacilitiesName`, `FacilitiesImage`, `Price`, `Description`, `Status`, `CampsiteID`, `PitchTypeID`, `LocalAttractionID`, `Duration`, `FacilitiesDescription`, `LocationAddress`) VALUES
+(14, 'Melbourne Azure', 'Images/_camp-1163419_1920.jpg', 'Australia Melbourne', 'Food + Security + Tent + Car parking + ', 'Images/download (28).jpg+Images/download (27).jpg+Images/download (26).jpg+Images/download (25).jpg+Images/download (24).jpg+', 300, 'Travelers may see the Outback, rainforests, and beaches in an immersive and ethical way with Azure Australia, which is dedicated to reducing environmental impact and fostering conservation. Our excursions educate visitors about Indigenous culture, animal protection, and eco-friendly activities, preserving the natural beauty of the locations we visit. Join us on an Azure journey for a once-in-a-lifetime opportunity to see Australia and be a part of a movement toward sustainable tourism that will protect the country beauty for future generations.', 'Active', 6, 9, 2, '5 days', 'We provide private tent for our visitors and guide with professionals how to make a tent. We have a 25 hours security and the customers do not need to worried about their security. We also provide breakfast lunch dinner. During camping, the doctors and camping professionals are nearby and do not need to worried about it. During 5 days camping we provide car parking. ', 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4011.306647314786!2d144.3046795336675!3d-38.13714863075259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smm!4v1695880113956!5m2!1sen!2smm'),
+(18, 'Campervan ', 'Images/_motorhome-1206525_1920.jpg', 'England', 'Fire Camp + Wild Swimming + Hiking + Food + Professional guides + ', 'Images/download (32).jpg+Images/download (31).jpg+Images/download (30).jpg+Images/download (29).jpg+', 250, 'With our camping campervan spots in England, you can experience the liberation of wide-open spaces and the natural beauty of the English countryside. Our roomy spaces, which are surrounded by tranquil settings and breathtaking natural beauty, provide the ideal retreat for fans of motorhomes. Our pitches provide all the comforts you need for a pleasant stay, whether youre an adventure-seeking family, a couple looking for a romantic break, or a lone traveler. While surrounded by the peace of nature, enjoy the comfort of power hookups, a clean water supply, and trash disposal facilities. Birdsong will wake you up, and when the sun sets, you may gather around a bonfire under the starry skies. Our English motorhome campsites provide a perfect fusion of luxury and nature, offering an amazing outdoor experience.', 'Active', 10, 11, 6, '5 days', 'We provide breakfast lunch and dinner for all visitors. At night we make fire camps and play games and singing together. During hiking there is a biologist near together and we can know the animals, plants around us during hiking. While wild swimming, the wild swimming professionals guide and looking around us and do not need to worried about us. Have a fun with us!', 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29783.893453440334!2d-2.499092856508273!3d53.38891826637457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smm!4v1695952999888!5m2!1sen!2smm'),
+(19, 'Bagan', 'Images/_pagodas-1029326_1920.jpg', 'Bagan Myanmar', 'Hot Balloon + Awsome sunset + Food + Transportation + Tourist guide + Tent + ', 'Images/download (36).jpg+Images/download (35).jpg+Images/download (34).jpg+Images/download (33).jpg+', 300, 'Submerge yourself in the immortal persona of Bagan, where old sanctuaries and pagodas stand as watchmen of history. Our organized Bagan experience offers voyagers a captivating excursion through this UNESCO World Legacy Site. Imagine yourself investigating more than 2,000 remarkable sanctuaries, each with its own exceptional story to tell. Our directed visits will divulge the mysteries of this old realm, drove by master guides saturated with neighborhood legend. As the sun sets, witness the ethereal magnificence of Bagans scene, with its brilliant towers enlightened by the delicate sparkle of nightfall. Rest your exhausted feet in painstakingly chosen facilities that mix current solace with customary appeal. Bagan is in excess of an objective; its a living demonstration of hundreds of years of culture and otherworldliness. Go along with us for an extraordinary experience that will leave you with enduring recollections of this charming corner of the world.', 'Active', 9, 10, 4, '5 days', 'When you reach Yangon International airport, we make transportation to the hotel and Bagan with our bus. When you reach Bagan, we give a pitch to give and no need to hire. In the evening we take the hot air balloon to see the beauty of ancient Bagan pagoda and romantic Bagan sun set view. ', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5821.236159519176!2d94.8569368879171!3d21.17272388723331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b5e50393d8ca61%3A0x371a4717c3e89981!2sOld%20Bagan!5e0!3m2!1sen!2smm!4v1696389507737!5m2!1sen!2smm');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pitchreview`
+--
+
+CREATE TABLE `pitchreview` (
+  `PitchReviewID` int(11) NOT NULL,
+  `PitchReview` longtext DEFAULT NULL,
+  `PitchID` int(11) DEFAULT NULL,
+  `CustomerID` int(11) DEFAULT NULL,
+  `ReviewDate` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pitchreview`
+--
+
+INSERT INTO `pitchreview` (`PitchReviewID`, `PitchReview`, `PitchID`, `CustomerID`, `ReviewDate`) VALUES
+(2, 'This is pitch can give me excellent feelings and memories to me. I am highly recommended this pitch to try when you reach to Australia', 14, 1, '7-10-2023');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pitchtype`
+--
+
+CREATE TABLE `pitchtype` (
+  `PitchTypeID` int(11) NOT NULL,
+  `TypeName` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pitchtype`
+--
+
+INSERT INTO `pitchtype` (`PitchTypeID`, `TypeName`) VALUES
+(9, 'Tent pitch'),
+(10, 'Touring caravan pitch'),
+(11, 'Motorhome pitch');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rssfeed`
+--
+
+CREATE TABLE `rssfeed` (
+  `id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `link` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `rssfeed`
+--
+
+INSERT INTO `rssfeed` (`id`, `title`, `description`, `link`) VALUES
+(1, 'New Wild Swimming Location', 'Discover our latest wild swimming location at River\'s Edge. Experience pristine waters and breathtaking scenery', 'http://example.com/wild-swimming-location-1'),
+(2, 'Availability Update', 'Additional spots now available for the upcoming long weekend. Book your camping pitch today!', 'http://example.com/availability-update-2'),
+(3, 'Swimming Tips and Safety Guidelines', 'Learn essential swimming tips and safety guidelines for a memorable and safe wild swimming experience.', 'http://example.com/swimming-tips'),
+(4, 'New Facilities at Mountain View Campsite', 'Exciting news! We have added new facilities at Mountain View Campsite', 'http://example.com/facilities-update'),
+(5, 'Family-Friendly Camping Experience', 'Plan a memorable camping experience with your family at our Family Oasis site. Fun activities for all ages!', 'http://example.com/family-friendly-camping');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sitereview`
+--
+
+CREATE TABLE `sitereview` (
+  `ReviewID` int(11) NOT NULL,
+  `CustomerID` int(11) DEFAULT NULL,
+  `Review` varchar(250) DEFAULT NULL,
+  `Rating` int(11) DEFAULT NULL,
+  `Date` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sitereview`
+--
+
+INSERT INTO `sitereview` (`ReviewID`, `CustomerID`, `Review`, `Rating`, `Date`) VALUES
+(1, 1, 'The GWSC is very suitable for the people who love wild camping because it have a large variety of wild camping sites around the world and each camping give the good facilities. To know all the camping in one place, GWSC is the best place. ', 4, '28-9-2023');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`AdminID`);
+
+--
+-- Indexes for table `booking`
+--
+ALTER TABLE `booking`
+  ADD PRIMARY KEY (`BookingCodeNo`),
+  ADD KEY `PitchID` (`PitchID`),
+  ADD KEY `CustomerID` (`CustomerID`);
+
+--
+-- Indexes for table `campsite`
+--
+ALTER TABLE `campsite`
+  ADD PRIMARY KEY (`CampsiteID`);
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`ContactID`);
+
+--
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`CustomerID`);
+
+--
+-- Indexes for table `ipaddress`
+--
+ALTER TABLE `ipaddress`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `localattraction`
+--
+ALTER TABLE `localattraction`
+  ADD PRIMARY KEY (`LocalAttractionID`);
+
+--
+-- Indexes for table `pitches`
+--
+ALTER TABLE `pitches`
+  ADD PRIMARY KEY (`PitchID`),
+  ADD KEY `CampsiteID` (`CampsiteID`),
+  ADD KEY `PitchTypeID` (`PitchTypeID`),
+  ADD KEY `LocalAttractionID` (`LocalAttractionID`);
+
+--
+-- Indexes for table `pitchreview`
+--
+ALTER TABLE `pitchreview`
+  ADD PRIMARY KEY (`PitchReviewID`),
+  ADD KEY `PitchID` (`PitchID`),
+  ADD KEY `CustomerID` (`CustomerID`);
+
+--
+-- Indexes for table `pitchtype`
+--
+ALTER TABLE `pitchtype`
+  ADD PRIMARY KEY (`PitchTypeID`);
+
+--
+-- Indexes for table `rssfeed`
+--
+ALTER TABLE `rssfeed`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sitereview`
+--
+ALTER TABLE `sitereview`
+  ADD PRIMARY KEY (`ReviewID`),
+  ADD KEY `CustomerID` (`CustomerID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `booking`
+--
+ALTER TABLE `booking`
+  MODIFY `BookingCodeNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `campsite`
+--
+ALTER TABLE `campsite`
+  MODIFY `CampsiteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `ContactID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `ipaddress`
+--
+ALTER TABLE `ipaddress`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `localattraction`
+--
+ALTER TABLE `localattraction`
+  MODIFY `LocalAttractionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `pitches`
+--
+ALTER TABLE `pitches`
+  MODIFY `PitchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `pitchreview`
+--
+ALTER TABLE `pitchreview`
+  MODIFY `PitchReviewID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `pitchtype`
+--
+ALTER TABLE `pitchtype`
+  MODIFY `PitchTypeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `rssfeed`
+--
+ALTER TABLE `rssfeed`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `sitereview`
+--
+ALTER TABLE `sitereview`
+  MODIFY `ReviewID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `booking`
+--
+ALTER TABLE `booking`
+  ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`PitchID`) REFERENCES `pitches` (`PitchID`),
+  ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`);
+
+--
+-- Constraints for table `pitches`
+--
+ALTER TABLE `pitches`
+  ADD CONSTRAINT `pitches_ibfk_1` FOREIGN KEY (`CampsiteID`) REFERENCES `campsite` (`CampsiteID`),
+  ADD CONSTRAINT `pitches_ibfk_2` FOREIGN KEY (`PitchTypeID`) REFERENCES `pitchtype` (`PitchTypeID`),
+  ADD CONSTRAINT `pitches_ibfk_3` FOREIGN KEY (`LocalAttractionID`) REFERENCES `localattraction` (`LocalAttractionID`);
+
+--
+-- Constraints for table `pitchreview`
+--
+ALTER TABLE `pitchreview`
+  ADD CONSTRAINT `pitchreview_ibfk_1` FOREIGN KEY (`PitchID`) REFERENCES `pitches` (`PitchID`),
+  ADD CONSTRAINT `pitchreview_ibfk_2` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`);
+
+--
+-- Constraints for table `sitereview`
+--
+ALTER TABLE `sitereview`
+  ADD CONSTRAINT `sitereview_ibfk_1` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

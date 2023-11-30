@@ -1,0 +1,1046 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lora&family=Poppins:wght@200;400&display=swap');
+.PrivacyPolicies{
+    padding: 10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+i{
+    pointer-events: none;
+}
+.flex-warp{
+    flex-wrap: wrap;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-item-center{
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 7px 10px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    color: black;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6006068a;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+button{
+    cursor: pointer;
+}
+.text-center{
+    text-align: center;
+}
+/*RegisterCss*/
+
+.RegisterBody{
+    background-image: url("Images/_Picture2.jpg");
+    background-position: center center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.BookingDisplay,form:not(.LocalAttractionContent,.PitchForm,.PitchSearchContainer,.Search){
+    background-color: azure;
+    padding: 18px;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    font-size: 1.3rem;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+form h1{
+    margin: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+input[type='Submit']{
+    margin: 18px 0 10px 0;
+    background-color: green;
+    color: white;
+}
+input[type='text'], input[type='password'], input[type = 'email'], textarea, select, input[type='number']{
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    margin: 8px 1px;
+    border: 1px solid #9e71c5;
+    resize: vertical;
+    overflow: auto;
+    padding: 8px 12px;
+}
+.LogInbth{
+    font-size: 1.2rem;
+    padding: 8px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    cursor: pointer;
+}
+
+/*AdminDashBoard*/
+
+.DashBoardNav{
+    background-color: rgba(85, 157, 157, 0.59);
+    font-size: 1.2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 230px;
+}
+.DashBoardButton{
+    padding: 15px 10px;
+    transition: 0.2s;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: rgba(85, 157, 157, 0.59);
+    border-bottom: 1px solid azure;
+    flex-direction: column;
+    display: block;
+    width: 100%;
+}
+.DashBoardButton:not(.active){
+    color: black;
+
+}
+.DashBoardButton:hover{
+    background-color: red;
+    color: white;
+}
+.text-small{
+    font-size: 1rem;
+}
+.DashboardCopyRight{
+    padding: 10px;
+}
+.DashboardPicture{
+    max-height: 150px;
+    height: 100%;
+}
+.Intro{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.DashboardName{
+    margin: 5px 0;
+    font-weight: bold;
+}
+.logo{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: red;
+}
+.DashBard-active {
+    background-color: green;
+    color: white;
+}
+.DashBoardItem{
+    width: 100%;
+    overflow: scroll;
+}
+.DashBoardBody{
+    display: flex;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+/*table*/
+
+.MainTable{
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0;
+    border-radius: 35px;
+
+}
+.List{
+    padding: 15px;
+    border-radius: 35px;
+    height: 100vh;
+    overflow-y: scroll;
+
+}
+table,th,td,tr{
+    border-collapse: collapse;
+    padding: 10px;
+    height: 30px;
+}
+th{
+    background-color: aqua;
+    font-size: 1.3rem;
+}
+.Action{
+    width: 100px;
+}
+tr:nth-child(odd){
+    background-color: rgba(66, 204, 204, 0.35);
+}
+.TableContainer{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 35px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+i{
+    color: black;
+    padding-right: 10px;
+}
+.ItemName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ButtomForm{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+.ButtomForm i:hover{
+    color: blue;
+}
+th:not(.ID){
+    text-align: left;
+}
+.ID{
+    width: 50px;
+    text-align: right;
+}
+tr:hover{
+    background-color: bisque;
+}
+
+.Header{
+    padding: 20px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Header h2{
+    font-size: 2.2rem;
+}
+.MoodleCall{
+    padding: 15px;
+    border:none;
+    border-radius: 10px;
+    outline: none;
+    background-color: bisque;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.MoodleCall:hover{
+    background-color: blue;
+    color: white;
+}
+/*MoodleMaking*/
+
+.Moodle{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MoodleBody{
+    height: 95vh;
+    overflow: auto;
+}
+.Moodle_Display{
+    display: flex;
+}
+.EditButton, .DeleteButton{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+/*pitch*/
+
+.PitchAdd{
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.PitchAdd:hover {
+    background: blue;
+    color: white;
+}
+.PitchContent{
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 5px 20px 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.PitchData{
+    padding: 10px 15px;
+    width: 100%;
+}
+.PitchData h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.Location{
+    font-size: 1.2rem;
+    padding: 5px 0;
+    font-weight: bold;
+}
+.FacilitiesContainer{
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.FacilitiesName{
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.price{
+    font-size: 2.2rem;
+    padding: 5px 0;
+
+}
+.PitchFooter{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px;
+}
+.Display_None{
+    display: none;
+    object-fit: cover;
+}
+.PitchEntryImages{
+    max-width: 500px;
+    margin: 10px 0;
+}
+.PitchDisplayImage{
+    max-width: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+.PitchSearchContainer{
+    display: flex;
+    border-radius: 30px;
+    margin:0 0 15px 0;
+    padding: 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    justify-content: space-between;
+}
+@media (max-width: 750px) {
+    .PitchSearchContainer{
+        flex-wrap: wrap;
+    }
+    .PitchSearchContainer div,.PitchSearchContainer select,.PitchSearchContainer input{
+        width: 100%;
+        margin: 3px 0;
+    }
+}
+.PitchSearchInput{
+    padding: 15px;
+    width: 70%;
+}
+.SearchButtonContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+}
+.LocationCall{
+    width: 300px;
+}
+.SearchButton{
+    background-color: rgb(240,240,240);
+    border-radius: 50px;
+    padding: 15px 25px;
+}
+/*LocalAttractionAdd*/
+
+.LocalAttractionPanel,.PitchPanel{
+    width: 95%;
+    height: 85vh;
+    overflow-y: auto;
+}
+.LocalAttractionBody,.PitchBody{
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.LocalAttractionImage,.PitchImage{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.LocalAttractionContent,.PitchForm{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.FeatureAddButton{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.FeatureAddButton:hover{
+    background-color: #9e71c5;
+    color: white;
+}
+
+.LocationFeatures,.PitchFeatures,.FeatureImageAdd{
+    max-width: 300px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.LocalImageContainer,.FacilitiesImageContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/*LogIn*/
+
+.Register{
+    background-color: #c54a4a;
+    color: white;
+    margin-top: 10px;
+}
+label{
+    margin-top: 5px;
+}
+
+/*Home*/
+
+header {
+    width: 100%;
+    z-index: 2;
+    background-color: #ffffff82;
+}
+.Home{
+    position: absolute;
+}
+nav {
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+.brand {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.log-in {
+    border: 1px solid black;
+    padding: 5px 25px;
+    border-radius: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+.nav-items a{
+    transition: 0.5s;
+}
+.nav-items .active {
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.nav-items a:not(.active):hover {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.Mobile-Mode{
+    padding: 5px;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    display: none;
+}
+.Mobile-Nav{
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 350px;
+    background: azure;
+    flex-direction: column;
+    justify-content: space-between;
+    transform:translateX(-100%);
+    display: none;
+    transition: 1s;
+}
+.Mobile-Nav-Item{
+    flex-direction: column;
+}
+.Mobile-Nav-Item .active{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.Mobile-Nav-Item a:hover:not(.active){
+    border-bottom: 1px solid black;
+}
+.Mobile-Nav-Title{
+    font-size: 3rem;
+}
+.Desktop-Mode{
+    gap: 0;
+}
+@media (max-width: 850px) {
+    .Desktop-Mode{
+        display: none;
+    }
+    .Mobile-Mode{
+        display: inline-block;
+    }
+    .Mobile-Nav{
+        display: flex;
+    }
+}
+/*Carousel*/
+
+.Carousel {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.Slide {
+    overflow: hidden;
+    z-index: -1;
+    transition-duration: 2s;
+    height: 100%;
+    position: relative;
+}
+.Slide img{
+    object-fit: cover;
+    object-position: center center;
+    width: 100vw;
+    height: 100vh;
+    transition:1.5s;
+    position: absolute;
+    opacity: 0;
+}
+.Slide img.active{
+    opacity: 1;
+}
+.Slide-button-group {
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+    z-index: 1;
+    padding: 5px;
+}
+
+.Slide-button-group>button {
+    background-color: transparent;
+    width: 17px;
+    height: 17px;
+    border-radius: 15px;
+    border: 2px solid white;
+    transition-duration: 0.5s;
+
+}
+
+.Slide-button-group>button.active {
+    width: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.Slide-button-group>button.active::before {
+    content: "";
+    background-color: #17de51;
+    width: 100%;
+    height: 17px;
+    border-radius: 20px;
+    animation-name: slide-in;
+    animation-duration: 11s;
+    display: inline-block;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.Slide-content {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: 1s ease-out;
+    max-width: 600px;
+}
+
+.Slide-button-group>button:hover {
+    transform: scale(1.2);
+    background-color: blue;
+}
+
+.Slide-Info {
+    padding: 15px;
+    color: white;
+    text-align: justify;
+}
+
+.Slide-Info div {
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    background: #385a554d;
+}
+
+.Text {
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    text-align: justify;
+}
+
+
+
+.Btn {
+    padding: 5px 15px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    color: white;
+}
+
+.Carousel-Active {
+    transition-delay: 1.2s;
+    transform: translateX(0%);
+}
+
+.Hero {
+    padding: 50px 20px 30px 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Search {
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid rgb(141, 173, 173);
+    background-color: white;
+    gap: 5px;
+    flex-direction: row;
+    padding: 0;
+    transition: 1.5s;
+}
+
+.Search input[type=text] {
+    border: none;
+    outline: none;
+    background: none;
+    margin: 7px 10px;
+    font-size: 1.1rem;
+    width: 15rem;
+    padding: 0 5px;
+}
+
+.Search button {
+    border: none;
+    padding: 7px 10px;
+    font-size: 1.2rem;
+    background-color: red;
+    color: white;
+    border-radius: 40px;
+}
+.Search-Container{
+    justify-content: center;
+    margin: 20px 0;
+}
+.Hero p {
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+/*Article*/
+article{
+    margin-top: 40px;
+
+}
+article h1{
+    font-size: 2.5rem;
+}
+/*Users*/
+
+.Users{
+    padding: 10px 0;
+    justify-content: space-around;
+}
+.Users-Card {
+    flex-direction: column;
+    padding: 20px;
+    font-size: 2.5rem;
+}
+.Users-Card p{
+    font-family: 'Lato', sans-serif;
+}
+.Users-Card i{
+    font-size: 5rem;
+    margin-bottom: 15px;
+}
+/*PitchCard*/
+
+.PitchShow{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+}
+.PitchCard{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 330px;
+    margin: 2px;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.PitchCardImage{
+    width: 100%;
+    object-fit: cover;
+}
+.PitchCardBody{
+    padding: 5px 15px;
+}
+.PitchCardLocation{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.text-justify{
+    text-align: justify;
+}
+.PitchCardFooter{
+    padding: 10px 15px;
+    justify-content: space-between;
+    border-top: 1px solid rgba(124, 84, 84, 0.66);
+
+}
+.PitchCardReadMore{
+    background: #941414;
+    color: white;
+    border-radius: 20px;
+}
+.ReadMore{
+    margin:20px 0;
+}
+
+/*Article Card*/
+
+.article-card{
+    padding: 20px;
+    margin-bottom: 50px;
+    gap: 15px;
+}
+.article-card iframe{
+    transition-duration: 1.5s;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+.article-card div:not(.SendContainer){
+    padding: 10px;
+    transition-duration: 1.5s;
+}
+.article-card ul{
+    margin-left: 15px;
+}
+.Map{
+    min-width: 40vw;
+}
+.Map iframe{
+    width: 100%;
+    height: 380px;
+}
+.article-card div.active{
+    transform: translateX(0%);
+}
+.article-card img.active{
+    transform: translateX(0%);
+}
+.article-left{
+    transform: translateX(-150%);
+}
+.article-right{
+    transform: translateX(150%);
+}
+article{
+    overflow-x: hidden;
+}
+@media (max-width: 750px) {
+    .article-card div,.Map,.article-card iframe{
+        width: 100%;
+    }
+    .article-card{
+        flex-wrap: wrap;
+    }
+}
+/*Footer*/
+footer{
+    background: rgb(232, 223, 223);
+    padding:50px 20px 20px 10px;
+    margin-top: auto;
+}
+.Footer{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+}
+.FooterTitle{
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+    padding: 7px 10px;
+}
+.FooterContent{
+    flex-direction: column;
+    align-items: start;
+}
+
+/*PitchTypesAvailability*/
+
+.PitchTypeAvl{
+    padding: 15px 30px;
+}
+.PitchAvlSearch{
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border:none;
+    background: rgba(136, 98, 17, 0.86);
+    color: white;
+    transition: 0.2s;
+}
+.PitchAvlSearch:hover{
+    background: blue;
+}
+.Combo{
+    margin-right: 15px;
+}
+
+/*Information*/
+.Information{
+    position: relative;
+    min-height: 100vh;
+}
+.ExitButton{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.8rem;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+.ExitButton:hover{
+    background: blue;
+    color: white;
+}
+.InformationSection{
+    padding: 15px;
+}
+.InformationSection p{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.InformationSection iframe{
+    width: 100%;
+    height: 400px;
+    max-width: 700px;
+}
+.InformationSection a{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+.Booking{
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 20px ;
+    font-size: 2rem;
+}
+.InformationSection a:hover{
+    background: blue;
+    color: white;
+}
+/*Review*/
+.ReviewButton{
+    width: 100%;
+    border-radius: 30px;
+    padding: 13px;
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.ReviewButton:hover{
+    background: blue;
+    color: white;
+}
+.ReviewContainer{
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.ReviewCard{
+    margin: 5px;
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 30px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.Privacy{
+    padding-left: 0;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.SendContainer{
+    justify-content: space-between;
+    width: 100%;
+    gap: 0;
+}
+@media (max-width: 1050px) {
+    .SendContainer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+.Send{
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    border: none;
+    background: #67470e;
+    color: white;
+    transition: 0.3s;
+}
+.Send:hover{
+    background: black;
+}
+.pe-none{
+    pointer-events: none;
+    background: #e7c689;
+}
+.BookingDisplay p{
+    margin: 3px 0;
+}
+.ReviewInput{
+    width: 100%;
+}
+@media (max-width: 750px) {
+    .PitchReviewButton{
+        width: 100%;
+    }
+    .PitchReviewButton{
+        margin-left: 0;
+    }
+}
+
+/*Profile*/
+
+.Profile-container{
+    padding: 15px;
+}
+.Profile-container p{
+    font-size: 1.2rem;
+
+}
+.ProfileEditBtn{
+    font-size: 1rem;
+    margin: 0;
+    background: black;
+    padding: 5px 20px;
+
+}
+.CustomerBookingShow{
+    padding: 15px;
+}
+.ProfileBtn{
+    padding: 5px 15px;
+}
+.ProfileBody{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.ProfileBookingTable{
+    margin: 10px 15px 30px 15px;
+}
